@@ -9,7 +9,7 @@ function monet.setup(values) setmetatable(config, { __index = vim.tbl_extend("fo
 -- Highlight group
 function monet.highlight(colors)
 	local groups =
-		vim.tbl_extend("force", colors, type(config.overrides) == "function" and config.overrides() or config.overrides)
+			vim.tbl_extend("force", colors, type(config.overrides) == "function" and config.overrides() or config.overrides)
 
 	for group, parameters in pairs(groups) do
 		if parameters.style then
@@ -33,12 +33,14 @@ function monet.colorscheme()
 	end
 
 	-- Disable semantic tokens
-	vim.api.nvim_create_autocmd("LspAttach", {
-		callback = function(args)
-			local client = vim.lsp.get_client_by_id(args.data.client_id)
-			client.server_capabilities.semanticTokensProvider = nil
-		end,
-	})
+	if not config.semantic_tokens then
+		vim.api.nvim_create_autocmd("LspAttach", {
+			callback = function(args)
+				local client = vim.lsp.get_client_by_id(args.data.client_id)
+				client.server_capabilities.semanticTokensProvider = nil
+			end,
+		})
+	end
 
 	vim.api.nvim_command "hi clear"
 	if vim.fn.exists "syntax_on" then vim.api.nvim_command "syntax reset" end

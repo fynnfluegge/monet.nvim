@@ -1,39 +1,39 @@
 local C = require "monet.palette"
 local O = require "monet.config"
 
-local transparent_bg = O.transparent_background and "NONE" or C.mantle
+local transparent_bg = O.transparent_background and "NONE" or C.dark1
 
 local monet = {
 
 	normal = {
-		a = { bg = C.blue, fg = C.mantle, gui = "bold" },
-		b = { bg = C.surface1, fg = C.blue },
-		c = { bg = transparent_bg, fg = C.text },
+		a = { bg = C.softblue, fg = C.dark1, gui = "bold" },
+		b = { bg = C.darkgrey4, fg = C.softblue },
+		c = { bg = transparent_bg, fg = C.grey0 },
 	},
 	insert = {
-		a = { bg = C.green, fg = C.base, gui = "bold" },
-		b = { bg = C.surface1, fg = C.green },
+		a = { bg = C.mossgreen, fg = C.dark0, gui = "bold" },
+		b = { bg = C.darkgrey1, fg = C.mossgreen },
 	},
 	terminal = {
-		a = { bg = C.green, fg = C.base, gui = "bold" },
-		b = { bg = C.surface1, fg = C.green },
+		a = { bg = C.mossgreen, fg = C.dark0, gui = "bold" },
+		b = { bg = C.darkgrey1, fg = C.mossgreen },
 	},
 	command = {
-		a = { bg = C.peach, fg = C.base, gui = "bold" },
-		b = { bg = C.surface1, fg = C.peach },
+		a = { bg = C.orange, fg = C.dark0, gui = "bold" },
+		b = { bg = C.darkgrey1, fg = C.orange },
 	},
 	visual = {
-		a = { bg = C.mauve, fg = C.base, gui = "bold" },
-		b = { bg = C.surface1, fg = C.mauve },
+		a = { bg = C.cornflowerblue, fg = C.dark0, gui = "bold" },
+		b = { bg = C.darkgrey1, fg = C.cornflowerblue },
 	},
 	replace = {
-		a = { bg = C.red, fg = C.base, gui = "bold" },
-		b = { bg = C.surface1, fg = C.red },
+		a = { bg = C.red, fg = C.dark0, gui = "bold" },
+		b = { bg = C.darkgrey1, fg = C.red },
 	},
 	inactive = {
-		a = { bg = transparent_bg, fg = C.blue },
-		b = { bg = transparent_bg, fg = C.surface1, gui = "bold" },
-		c = { bg = transparent_bg, fg = C.overlay0 },
+		a = { bg = transparent_bg, fg = C.softblue },
+		b = { bg = transparent_bg, fg = C.darkgrey1, gui = "bold" },
+		c = { bg = transparent_bg, fg = C.grey5 },
 	},
 }
 

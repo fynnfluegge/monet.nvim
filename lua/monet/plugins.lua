@@ -5,56 +5,56 @@ local U = require "monet.utils"
 local M = {}
 
 function M.get()
-	local active_bg = O.transparent_background and C.none or C.mantle
-	local inactive_bg = O.transparent_background and C.none or C.base
+	local active_bg = O.transparent_background and C.none or C.dark1
+	local inactive_bg = O.transparent_background and C.none or C.dark0
 	return {
 		-- Neo-tree
-		NeoTreeDirectoryName = { fg = C.blue },
-		NeoTreeDirectoryIcon = { fg = C.blue },
-		NeoTreeNormal = { fg = C.text, bg = active_bg },
-		NeoTreeNormalNC = { fg = C.text, bg = active_bg },
-		NeoTreeExpander = { fg = C.overlay0 },
-		NeoTreeIndentMarker = { fg = C.overlay0 },
-		NeoTreeRootName = { fg = C.blue, style = { "bold" } },
-		NeoTreeSymbolicLinkTarget = { fg = C.pink },
+		NeoTreeDirectoryName = { fg = C.softblue },
+		NeoTreeDirectoryIcon = { fg = C.softblue },
+		NeoTreeNormal = { fg = C.grey0, bg = active_bg },
+		NeoTreeNormalNC = { fg = C.grey0, bg = active_bg },
+		NeoTreeExpander = { fg = C.grey5 },
+		NeoTreeIndentMarker = { fg = C.grey5 },
+		NeoTreeRootName = { fg = C.softblue, style = { "bold" } },
+		NeoTreeSymbolicLinkTarget = { fg = C.skyblue },
 
 		NeoTreeGitAdded = { fg = C.pastelgreen },
 		NeoTreeGitConflict = { fg = C.red },
 		NeoTreeGitDeleted = { fg = C.red },
-		NeoTreeGitIgnored = { fg = C.overlay0 },
+		NeoTreeGitIgnored = { fg = C.grey5 },
 		NeoTreeGitModified = { fg = C.yellow },
 		NeoTreeGitUnstaged = { fg = C.red },
-		NeoTreeGitUntracked = { fg = C.mauve },
-		NeoTreeGitStaged = { fg = C.green },
+		NeoTreeGitUntracked = { fg = C.cornflowerblue },
+		NeoTreeGitStaged = { fg = C.mossgreen },
 
 		NeoTreeFloatBorder = { link = "FloatBorder" },
 		NeoTreeFloatTitle = { link = "FloatTitle" },
 
-		NeoTreeFileNameOpened = { fg = C.pink },
-		NeoTreeDimText = { fg = C.overlay1 },
-		NeoTreeFilterTerm = { fg = C.green, style = { "bold" } },
-		NeoTreeTabActive = { bg = active_bg, fg = C.lavender, style = { "bold" } },
-		NeoTreeTabInactive = { bg = inactive_bg, fg = C.overlay0 },
+		NeoTreeFileNameOpened = { fg = C.skyblue },
+		NeoTreeDimText = { fg = C.grey4 },
+		NeoTreeFilterTerm = { fg = C.mossgreen, style = { "bold" } },
+		NeoTreeTabActive = { bg = active_bg, fg = C.pastelturqoise, style = { "bold" } },
+		NeoTreeTabInactive = { bg = inactive_bg, fg = C.grey5 },
 		NeoTreeTabSeparatorActive = { fg = active_bg, bg = active_bg },
 		NeoTreeTabSeparatorInactive = { fg = inactive_bg, bg = inactive_bg },
-		NeoTreeVertSplit = { fg = C.base, bg = inactive_bg },
-		NeoTreeStatusLineNC = { fg = C.mantle, bg = C.mantle },
+		NeoTreeVertSplit = { fg = C.dark0, bg = inactive_bg },
+		NeoTreeStatusLineNC = { fg = C.dark1, bg = C.dark1 },
 
 		-- Alpha
-		DashboardShortCut = { fg = C.pink },
-		DashboardHeader = { fg = C.blue },
-		DashboardCenter = { fg = C.green },
+		DashboardShortCut = { fg = C.skyblue },
+		DashboardHeader = { fg = C.softblue },
+		DashboardCenter = { fg = C.mossgreen },
 		DashboardFooter = { fg = C.yellow, style = { "italic" } },
-		DashboardMruTitle = { fg = C.sky },
-		DashboardProjectTitle = { fg = C.sky },
-		DashboardFiles = { fg = C.lavender },
-		DashboardKey = { fg = C.peach },
-		DashboardDesc = { fg = C.blue },
-		DashboardIcon = { fg = C.pink, bold = true },
+		DashboardMruTitle = { fg = C.lightcyan },
+		DashboardProjectTitle = { fg = C.lightcyan },
+		DashboardFiles = { fg = C.pastelturqoise },
+		DashboardKey = { fg = C.orange },
+		DashboardDesc = { fg = C.softblue },
+		DashboardIcon = { fg = C.skyblue, bold = true },
 
 		-- Aerial
 		AerialLine = { fg = C.yellow, bg = C.none },
-		AerialGuide = { fg = C.overlay2 },
+		AerialGuide = { fg = C.grey3 },
 		AerialBooleanIcon = { link = "@boolean" },
 		AerialClassIcon = { link = "@type" },
 		AerialConstantIcon = { link = "@constant" },
@@ -82,34 +82,42 @@ function M.get()
 		AerialKeyIcon = { link = "@type" },
 		AerialNullIcon = { link = "@type" },
 
+		-- Rainbow Delimiters
 		RainbowDelimiterRed = { fg = C.red },
 		RainbowDelimiterYellow = { fg = C.yellow },
-		RainbowDelimiterBlue = { fg = C.blue },
-		RainbowDelimiterOrange = { fg = C.peach },
-		RainbowDelimiterGreen = { fg = C.green },
-		RainbowDelimiterViolet = { fg = C.mauve },
-		RainbowDelimiterCyan = { fg = C.teal },
+		RainbowDelimiterBlue = { fg = C.softblue },
+		RainbowDelimiterOrange = { fg = C.orange },
+		RainbowDelimiterGreen = { fg = C.mossgreen },
+		RainbowDelimiterViolet = { fg = C.cornflowerblue },
+		RainbowDelimiterCyan = { fg = C.softturqoise },
 
+		-- Telescope
 		TelescopeNormal = { link = "NormalFloat" },
 		TelescopeBorder = { link = "FloatBorder" },
-		TelescopeSelectionCaret = { fg = C.flamingo },
+		TelescopeSelectionCaret = { fg = C.pastelpink },
 		TelescopeSelection = {
-			fg = O.transparent_background and C.flamingo or C.text,
-			bg = O.transparent_background and C.none or C.surface0,
+			fg = O.transparent_background and C.pastelpink or C.grey0,
+			bg = O.transparent_background and C.none or C.darkgrey5,
 			style = { "bold" },
 		},
-		TelescopeMatching = { fg = C.blue },
+		TelescopeMatching = { fg = C.softblue },
 
+		-- Which key
 		WhichKey = { link = "NormalFloat" },
 		WhichKeyBorder = { link = "FloatBorder" },
+		WhichKeyGroup = { fg = C.softblue },
+		WhichKeySeparator = { fg = C.grey5 },
+		WhichKeyDesc = { fg = C.skyblue },
+		WhichKeyValue = { fg = C.grey5 },
 
-		WhichKeyGroup = { fg = C.blue },
-		WhichKeySeparator = { fg = C.overlay0 },
-		WhichKeyDesc = { fg = C.pink },
-		WhichKeyValue = { fg = C.overlay0 },
+		-- Indent blankline
+		IblIndent = { fg = C.darkgrey5 },
+		IblScope = { fg = C.darkgrey5 },
 
-		IblIndent = { fg = C.surface0 },
-		IblScope = { fg = C.surface0 },
+		-- Trouble
+		TroubleText = { fg = C.mossgreen },
+		TroubleCount = { fg = C.skyblue, bg = O.transparent_background and C.none or C.darkgrey1 },
+		TroubleNormal = { fg = C.grey0, bg = O.transparent_background and C.none or C.darkgrey0 },
 	}
 end
 

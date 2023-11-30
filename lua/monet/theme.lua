@@ -6,102 +6,103 @@ local M = {}
 
 function M.get()
 	return {
-		ColorColumn = { bg = C.surface0 },
-		Conceal = { fg = C.overlay1 },
-		Cursor = { fg = C.base, bg = C.text },
-		lCursor = { fg = C.base, bg = C.text },
-		CursorIM = { fg = C.base, bg = C.text },
-		CursorColumn = { bg = C.mantle },
+		ColorColumn = { bg = C.darkgrey5 },
+		Conceal = { fg = C.grey4 },
+		Cursor = { fg = C.dark0, bg = C.grey0 },
+		lCursor = { fg = C.dark0, bg = C.grey0 },
+		CursorIM = { fg = C.dark0, bg = C.grey0 },
+		CursorColumn = { bg = C.dark1 },
 		CursorLine = {
-			bg = U.darken("#3b3f54", 0.64, C.surface0),
+			bg = U.darken("#3b3f54", 0.64, C.darkgrey5),
 		},
-		Directory = { fg = C.blue },
-		EndOfBuffer = { fg = O.show_end_of_buffer and C.surface1 or C.base },
+		Directory = { fg = C.softblue },
+		EndOfBuffer = { fg = O.show_end_of_buffer and C.darkgrey1 or C.dark0 },
 		ErrorMsg = { fg = C.red, style = { "bold", "italic" } },
-		VertSplit = { fg = O.transparent_background and C.surface1 or C.crust },
-		Folded = { fg = C.blue, bg = O.transparent_background and C.none or C.surface1 },
-		FoldColumn = { fg = C.overlay0 },
-		SignColumn = { fg = C.surface1 },
-		SignColumnSB = { bg = C.crust, fg = C.surface1 },
-		Substitute = { fg = C.mantle, bg = C.peach },
-		LineNr = { fg = C.surface1 },
-		CursorLineNr = { fg = C.lavender },
-		MatchParen = { fg = C.peach, bg = C.surface1, style = { "bold" } },
-		ModeMsg = { fg = C.text, style = { "bold" } },
+		VertSplit = { fg = O.transparent_background and C.darkgrey1 or C.darkgrey0 },
+		Folded = { fg = C.softblue, bg = O.transparent_background and C.none or C.darkgrey1 },
+		FoldColumn = { fg = C.grey5 },
+		SignColumn = { fg = C.darkgrey1 },
+		SignColumnSB = { bg = C.darkgrey0, fg = C.darkgrey1 },
+		Substitute = { fg = C.dark1, bg = C.orange },
+		LineNr = { fg = C.darkgrey1 },
+		CursorLineNr = { fg = C.pastelturqoise },
+		MatchParen = { fg = C.orange, bg = C.darkgrey1, style = { "bold" } },
+		ModeMsg = { fg = C.grey0, style = { "bold" } },
 		MsgSeparator = {},
-		MoreMsg = { fg = C.blue },
-		NonText = { fg = C.overlay0 },
-		Normal = { fg = C.text, bg = O.transparent_background and C.none or C.base },
+		MoreMsg = { fg = C.softblue },
+		NonText = { fg = C.grey5 },
+		Normal = { fg = C.grey0, bg = O.transparent_background and C.none or C.dark0 },
 		NormalNC = {
-			fg = C.text,
-			bg = (O.transparent_background and C.none) or C.base,
+			fg = C.grey0,
+			bg = (O.transparent_background and C.none) or C.dark0,
 		},
-		NormalSB = { fg = C.text, bg = C.crust },
-		NormalFloat = { fg = C.text, bg = (O.transparent_background and vim.o.winblend == 0) and C.none or C.mantle },
-		FloatBorder = { fg = C.blue },
-		FloatTitle = { fg = C.subtext0 },
+		NormalSB = { fg = C.grey0, bg = C.darkgrey0 },
+		NormalFloat = { fg = C.grey0, bg = (O.transparent_background and vim.o.winblend == 0) and C.none or C.dark1 },
+		FloatBorder = { fg = C.softblue },
+		FloatTitle = { fg = C.grey2 },
 		Pmenu = {
-			bg = (O.transparent_background and vim.o.pumblend == 0) and C.none or U.darken(C.surface0, 0.8, C.crust),
-			fg = C.overlay2,
+			bg = (O.transparent_background and vim.o.pumblend == 0) and C.none
+				or U.darken(C.darkgrey5, 0.8, C.darkgrey0),
+			fg = C.grey3,
 		},
-		PmenuSel = { bg = C.surface1, style = { "bold" } },
-		PmenuSbar = { bg = C.surface1 },
-		PmenuThumb = { bg = C.overlay0 },
-		Question = { fg = C.blue },
-		QuickFixLine = { bg = C.surface1, style = { "bold" } },
-		Search = { bg = U.darken(C.sky, 0.30, C.base), fg = C.text },
-		IncSearch = { bg = U.darken(C.sky, 0.90, C.base), fg = C.mantle },
-		CurSearch = { bg = C.red, fg = C.mantle },
+		PmenuSel = { bg = C.darkgrey1, style = { "bold" } },
+		PmenuSbar = { bg = C.darkgrey1 },
+		PmenuThumb = { bg = C.grey5 },
+		Question = { fg = C.softblue },
+		QuickFixLine = { bg = C.darkgrey1, style = { "bold" } },
+		Search = { bg = U.darken(C.lightcyan, 0.30, C.dark0), fg = C.grey0 },
+		IncSearch = { bg = U.darken(C.lightcyan, 0.90, C.dark0), fg = C.dark1 },
+		CurSearch = { bg = C.red, fg = C.dark1 },
 		SpecialKey = { link = "NonText" },
 		SpellBad = { sp = C.red, style = { "undercurl" } },
 		SpellCap = { sp = C.yellow, style = { "undercurl" } },
-		SpellLocal = { sp = C.blue, style = { "undercurl" } },
-		SpellRare = { sp = C.green, style = { "undercurl" } },
-		StatusLine = { fg = C.text, bg = O.transparent_background and C.none or C.mantle },
-		StatusLineNC = { fg = C.surface1, bg = O.transparent_background and C.none or C.mantle },
-		TabLine = { bg = C.mantle, fg = C.surface1 },
+		SpellLocal = { sp = C.softblue, style = { "undercurl" } },
+		SpellRare = { sp = C.mossgreen, style = { "undercurl" } },
+		StatusLine = { fg = C.grey0, bg = O.transparent_background and C.none or C.dark1 },
+		StatusLineNC = { fg = C.darkgrey1, bg = O.transparent_background and C.none or C.dark1 },
+		TabLine = { bg = C.dark1, fg = C.darkgrey1 },
 		TabLineFill = {},
-		TabLineSel = { fg = C.green, bg = C.surface1 },
-		Title = { fg = C.blue, style = { "bold" } },
-		Visual = { bg = C.surface1, style = { "bold" } },
-		VisualNOS = { bg = C.surface1, style = { "bold" } },
+		TabLineSel = { fg = C.mossgreen, bg = C.darkgrey1 },
+		Title = { fg = C.softblue, style = { "bold" } },
+		Visual = { bg = C.darkgrey1, style = { "bold" } },
+		VisualNOS = { bg = C.darkgrey1, style = { "bold" } },
 		WarningMsg = { fg = C.yellow },
-		Whitespace = { fg = C.surface1 },
-		WildMenu = { bg = C.overlay0 },
-		WinBar = { fg = C.rosewater },
+		Whitespace = { fg = C.darkgrey1 },
+		WildMenu = { bg = C.grey5 },
+		WinBar = { fg = C.pastelpeach },
 
-		Comment = { fg = C.overlay0, bg = "NONE", italic = true },
+		Comment = { fg = C.grey5, bg = "NONE", italic = true },
 		SpecialComment = { link = "Special" },
-		Constant = { fg = C.peach },
+		Constant = { fg = C.orange },
 		String = { fg = C.springgreen, style = O.styles.strings or {} },
-		Character = { fg = C.teal },
-		Number = { fg = C.peach, style = O.styles.numbers or {} },
+		Character = { fg = C.softturqoise },
+		Number = { fg = C.orange, style = O.styles.numbers or {} },
 		Float = { link = "Number" },
-		Boolean = { fg = C.peach, style = O.styles.booleans or {} },
-		Identifier = { fg = C.lavender, style = O.styles.variables or {} },
-		Function = { fg = C.blue, style = O.styles.functions or {} },
-		Statement = { fg = C.mauve },
-		Conditional = { fg = C.mauve, style = O.styles.conditionals or {} },
-		Repeat = { fg = C.mauve, style = O.styles.loops or {} },
-		Label = { fg = C.sapphire },
-		Operator = { fg = C.sky, style = O.styles.operators or {} },
-		Keyword = { fg = C.mauve, style = O.styles.keywords or {} },
-		Exception = { fg = C.mauve, style = O.styles.keywords or {} },
+		Boolean = { fg = C.orange, style = O.styles.booleans or {} },
+		Identifier = { fg = C.pastelturqoise, style = O.styles.variables or {} },
+		Function = { fg = C.softblue, style = O.styles.functions or {} },
+		Statement = { fg = C.cornflowerblue },
+		Conditional = { fg = C.cornflowerblue, style = O.styles.conditionals or {} },
+		Repeat = { fg = C.cornflowerblue, style = O.styles.loops or {} },
+		Label = { fg = C.azureblue },
+		Operator = { fg = C.lightcyan, style = O.styles.operators or {} },
+		Keyword = { fg = C.cornflowerblue, style = O.styles.keywords or {} },
+		Exception = { fg = C.cornflowerblue, style = O.styles.keywords or {} },
 
-		PreProc = { fg = C.pink },
-		Include = { fg = C.mauve, style = O.styles.keywords or {} },
+		PreProc = { fg = C.skyblue },
+		Include = { fg = C.cornflowerblue, style = O.styles.keywords or {} },
 		Define = { link = "PreProc" },
-		Macro = { fg = C.mauve },
+		Macro = { fg = C.cornflowerblue },
 		PreCondit = { link = "PreProc" },
 
 		StorageClass = { fg = C.yellow },
 		Structure = { fg = C.yellow },
-		Special = { fg = C.pink },
+		Special = { fg = C.skyblue },
 		Type = { fg = C.yellow, style = O.styles.types or {} },
 		Typedef = { link = "Type" },
 		SpecialChar = { link = "Special" },
-		Tag = { fg = C.lavender, style = { "bold" } },
-		Delimiter = { fg = C.overlay2 },
+		Tag = { fg = C.pastelturqoise, style = { "bold" } },
+		Delimiter = { fg = C.grey3 },
 		Debug = { link = "Special" },
 
 		Underlined = { style = { "underline" } },
@@ -109,83 +110,83 @@ function M.get()
 		Italic = { style = { "italic" } },
 
 		Error = { fg = C.red },
-		Todo = { bg = C.yellow, fg = C.base, style = { "bold" } },
+		Todo = { bg = C.yellow, fg = C.dark0, style = { "bold" } },
 		qfLineNr = { fg = C.yellow },
-		qfFileName = { fg = C.blue },
-		htmlH1 = { fg = C.pink, style = { "bold" } },
-		htmlH2 = { fg = C.blue, style = { "bold" } },
-		mkdCodeDelimiter = { bg = C.base, fg = C.text },
-		mkdCodeStart = { fg = C.flamingo, style = { "bold" } },
-		mkdCodeEnd = { fg = C.flamingo, style = { "bold" } },
+		qfFileName = { fg = C.softblue },
+		htmlH1 = { fg = C.skyblue, style = { "bold" } },
+		htmlH2 = { fg = C.softblue, style = { "bold" } },
+		mkdCodeDelimiter = { bg = C.dark0, fg = C.grey0 },
+		mkdCodeStart = { fg = C.pastelpink, style = { "bold" } },
+		mkdCodeEnd = { fg = C.pastelpink, style = { "bold" } },
 
 		-- debugging
-		debugPC = { bg = O.transparent_background and C.none or C.crust },
-		debugBreakpoint = { bg = C.base, fg = C.overlay0 },
+		debugPC = { bg = O.transparent_background and C.none or C.darkgrey0 },
+		debugBreakpoint = { bg = C.dark0, fg = C.grey5 },
 		-- illuminate
-		illuminatedWord = { bg = C.surface1 },
-		illuminatedCurWord = { bg = C.surface1 },
+		illuminatedWord = { bg = C.darkgrey1 },
+		illuminatedCurWord = { bg = C.darkgrey1 },
 		-- diff
-		diffAdded = { fg = C.green },
+		diffAdded = { fg = C.mossgreen },
 		diffRemoved = { fg = C.red },
-		diffChanged = { fg = C.blue },
+		diffChanged = { fg = C.softblue },
 		diffOldFile = { fg = C.yellow },
-		diffNewFile = { fg = C.peach },
-		diffFile = { fg = C.blue },
-		diffLine = { fg = C.overlay0 },
-		diffIndexLine = { fg = C.teal },
-		DiffAdd = { bg = U.darken(C.green, 0.18, C.base) },
-		DiffChange = { bg = U.darken(C.blue, 0.07, C.base) },
-		DiffDelete = { bg = U.darken(C.red, 0.18, C.base) },
-		DiffText = { bg = U.darken(C.blue, 0.30, C.base) },
+		diffNewFile = { fg = C.orange },
+		diffFile = { fg = C.softblue },
+		diffLine = { fg = C.grey5 },
+		diffIndexLine = { fg = C.softturqoise },
+		DiffAdd = { bg = U.darken(C.mossgreen, 0.18, C.dark0) },
+		DiffChange = { bg = U.darken(C.softblue, 0.07, C.dark0) },
+		DiffDelete = { bg = U.darken(C.red, 0.18, C.dark0) },
+		DiffText = { bg = U.darken(C.softblue, 0.30, C.dark0) },
 		-- NeoVim
 		healthError = { fg = C.red },
-		healthSuccess = { fg = C.teal },
+		healthSuccess = { fg = C.softturqoise },
 		healthWarning = { fg = C.yellow },
 		-- misc
 
 		-- glyphs
 		GlyphPalette1 = { fg = C.red },
-		GlyphPalette2 = { fg = C.teal },
+		GlyphPalette2 = { fg = C.softturqoise },
 		GlyphPalette3 = { fg = C.yellow },
-		GlyphPalette4 = { fg = C.blue },
-		GlyphPalette6 = { fg = C.teal },
-		GlyphPalette7 = { fg = C.text },
+		GlyphPalette4 = { fg = C.softblue },
+		GlyphPalette6 = { fg = C.softturqoise },
+		GlyphPalette7 = { fg = C.grey0 },
 		GlyphPalette9 = { fg = C.red },
 
 		-- rainbow
 		rainbow1 = { fg = C.red },
-		rainbow2 = { fg = C.peach },
+		rainbow2 = { fg = C.orange },
 		rainbow3 = { fg = C.yellow },
-		rainbow4 = { fg = C.green },
-		rainbow5 = { fg = C.sapphire },
-		rainbow6 = { fg = C.lavender },
+		rainbow4 = { fg = C.mossgreen },
+		rainbow5 = { fg = C.azureblue },
+		rainbow6 = { fg = C.pastelturqoise },
 	}
 end
 
 function M.set_terminal_colors()
-	vim.g.terminal_color_0 = C.overlay0
-	vim.g.terminal_color_8 = C.overlay1
+	vim.g.terminal_color_0 = C.grey5
+	vim.g.terminal_color_8 = C.grey4
 
 	vim.g.terminal_color_1 = C.red
 	vim.g.terminal_color_9 = C.red
 
-	vim.g.terminal_color_2 = C.green
-	vim.g.terminal_color_10 = C.green
+	vim.g.terminal_color_2 = C.springgreen
+	vim.g.terminal_color_10 = C.springgreen
 
 	vim.g.terminal_color_3 = C.yellow
 	vim.g.terminal_color_11 = C.yellow
 
-	vim.g.terminal_color_4 = C.blue
-	vim.g.terminal_color_12 = C.blue
+	vim.g.terminal_color_4 = C.softblue
+	vim.g.terminal_color_12 = C.softblue
 
-	vim.g.terminal_color_5 = C.pink
-	vim.g.terminal_color_13 = C.pink
+	vim.g.terminal_color_5 = C.skyblue
+	vim.g.terminal_color_13 = C.skyblue
 
-	vim.g.terminal_color_6 = C.sky
-	vim.g.terminal_color_14 = C.sky
+	vim.g.terminal_color_6 = C.lightcyan
+	vim.g.terminal_color_14 = C.lightcyan
 
-	vim.g.terminal_color_7 = C.text
-	vim.g.terminal_color_15 = C.text
+	vim.g.terminal_color_7 = C.grey0
+	vim.g.terminal_color_15 = C.grey0
 end
 
 return M

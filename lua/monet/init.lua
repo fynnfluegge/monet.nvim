@@ -9,7 +9,7 @@ function monet.setup(values) setmetatable(config, { __index = vim.tbl_extend("fo
 -- Highlight group
 function monet.highlight(colors)
 	local groups =
-			vim.tbl_extend("force", colors, type(config.overrides) == "function" and config.overrides() or config.overrides)
+		vim.tbl_extend("force", colors, type(config.overrides) == "function" and config.overrides() or config.overrides)
 
 	for group, parameters in pairs(groups) do
 		if parameters.style then
@@ -45,7 +45,6 @@ function monet.colorscheme()
 	vim.api.nvim_command "hi clear"
 	if vim.fn.exists "syntax_on" then vim.api.nvim_command "syntax reset" end
 
-	vim.g.VM_theme_set_by_colorscheme = true
 	vim.o.termguicolors = true
 	vim.g.colors_name = "monet"
 

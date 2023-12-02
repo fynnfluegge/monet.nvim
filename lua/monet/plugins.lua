@@ -40,7 +40,7 @@ function M.get()
 		AerialNullIcon = { link = "@type" },
 
 		-- Alpha
-		AlphaShortcut = { fg = C.mossgreen },
+		AlphaShortcut = { fg = C.pastelgreen },
 		AlphaHeader = { fg = C.softblue },
 		AlphaHeaderLabel = { fg = C.orange },
 		AlphaButtons = { fg = C.pastelturqoise },
@@ -103,7 +103,7 @@ function M.get()
 		-- Dashboard
 		DashboardShortCut = { fg = C.skyblue },
 		DashboardHeader = { fg = C.softblue },
-		DashboardCenter = { fg = C.mossgreen },
+		DashboardCenter = { fg = C.pastelgreen },
 		DashboardFooter = { fg = C.yellow, style = { "italic" } },
 		DashboardMruTitle = { fg = C.lightcyan },
 		DashboardProjectTitle = { fg = C.lightcyan },

@@ -74,7 +74,7 @@ function M.get()
 		Comment = { fg = C.grey5, bg = "NONE", italic = true },
 		SpecialComment = { link = "Special" },
 		Constant = { fg = C.orange },
-		String = { fg = C.springgreen, style = O.styles.strings or {} },
+		String = { fg = U.darken(C.springgreen, 0.92, C.dark0), style = O.styles.strings or {} },
 		Character = { fg = C.softturqoise },
 		Number = { fg = C.orange, style = O.styles.numbers or {} },
 		Float = { link = "Number" },

@@ -4,7 +4,7 @@ local O = require "monet.config"
 local M = {}
 
 function M.get()
-	return { -- Reference: https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md
+	return {
 		DiagnosticError = { fg = C.red },
 		DiagnosticHint = { fg = C.softturqoise },
 		DiagnosticInfo = { fg = C.lightcyan },
@@ -121,7 +121,7 @@ function M.get()
 		["@tag.attribute"] = { fg = C.softturqoise, style = { "italic" } }, -- Tags like html tag names.
 		["@tag.delimiter"] = { fg = C.lightcyan }, -- Tag delimiter like < > /
 
-		-- Language specific:
+		-- Language specific
 		-- bash
 		["@function.builtin.bash"] = { fg = C.red, style = { "italic" } },
 
@@ -133,9 +133,6 @@ function M.get()
 		["@text.title.5.markdown"] = { link = "rainbow5" },
 		["@text.title.6.markdown"] = { link = "rainbow6" },
 
-		-- java
-		["@constant.java"] = { fg = C.softturqoise },
-
 		-- css
 		["@property.css"] = { fg = C.pastelturqoise },
 		["@property.id.css"] = { fg = C.softblue },
@@ -146,13 +143,13 @@ function M.get()
 		["@number.css"] = { fg = C.orange },
 
 		-- toml
-		["@property.toml"] = { fg = C.softblue }, -- Differentiates between string and properties
+		["@property.toml"] = { fg = C.softblue },
 
 		-- json
-		["@label.json"] = { fg = C.softblue }, -- For labels: label: in C and :label: in Lua.
+		["@label.json"] = { fg = C.softblue },
 
 		-- lua
-		["@constructor.lua"] = { fg = C.pastelpink }, -- For constructor calls and definitions: = { } in Lua.
+		["@constructor.lua"] = { fg = C.pastelpink },
 
 		-- typescript
 		["@property.typescript"] = { fg = C.pastelturqoise, style = O.styles.properties or {} },
@@ -161,21 +158,6 @@ function M.get()
 		-- TSX (Typescript React)
 		["@constructor.tsx"] = { fg = C.pastelturqoise },
 		["@tag.attribute.tsx"] = { fg = C.cornflowerblue, style = { "italic" } },
-
-		-- yaml
-		["@field.yaml"] = { fg = C.softblue }, -- For fields.
-
-		-- Ruby
-		["@symbol.ruby"] = { fg = C.pastelpink },
-
-		-- PHP
-		["@method.php"] = { link = "Function" },
-		["@method.call.php"] = { link = "Function" },
-
-		-- C/CPP
-		["@type.builtin.c"] = { fg = C.yellow, style = {} },
-		["@property.cpp"] = { fg = C.grey0 },
-		["@type.builtin.cpp"] = { fg = C.yellow, style = {} },
 
 		-- Misc
 		gitcommitSummary = { fg = C.pastelpeach, style = { "italic" } },

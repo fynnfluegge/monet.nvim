@@ -8,6 +8,49 @@ function M.get()
 	local active_bg = O.transparent_background and C.none or C.dark1
 	local inactive_bg = O.transparent_background and C.none or C.dark0
 	return {
+
+		-- Aerial
+		AerialLine = { fg = C.yellow, bg = C.none },
+		AerialGuide = { fg = C.grey3 },
+		AerialBooleanIcon = { link = "@boolean" },
+		AerialClassIcon = { link = "@type" },
+		AerialConstantIcon = { link = "@constant" },
+		AerialConstructorIcon = { link = "@constructor" },
+		AerialFieldIcon = { link = "@field" },
+		AerialFunctionIcon = { link = "@function" },
+		AerialMethodIcon = { link = "@method" },
+		AerialNamespaceIcon = { link = "@namespace" },
+		AerialNumberIcon = { link = "@number" },
+		AerialOperatorIcon = { link = "@operator" },
+		AerialTypeParameterIcon = { link = "@type" },
+		AerialPropertyIcon = { link = "@property" },
+		AerialStringIcon = { link = "@string" },
+		AerialVariableIcon = { link = "@constant" },
+		AerialEnumMemberIcon = { link = "@field" },
+		AerialEnumIcon = { link = "@type" },
+		AerialFileIcon = { link = "@text.uri" },
+		AerialModuleIcon = { link = "@namespace" },
+		AerialPackageIcon = { link = "@namespace" },
+		AerialInterfaceIcon = { link = "@type" },
+		AerialStructIcon = { link = "@type" },
+		AerialEventIcon = { link = "@type" },
+		AerialArrayIcon = { link = "@constant" },
+		AerialObjectIcon = { link = "@type" },
+		AerialKeyIcon = { link = "@type" },
+		AerialNullIcon = { link = "@type" },
+
+		-- Alpha
+		DashboardShortCut = { fg = C.skyblue },
+		DashboardHeader = { fg = C.softblue },
+		DashboardCenter = { fg = C.mossgreen },
+		DashboardFooter = { fg = C.yellow, style = { "italic" } },
+		DashboardMruTitle = { fg = C.lightcyan },
+		DashboardProjectTitle = { fg = C.lightcyan },
+		DashboardFiles = { fg = C.pastelturqoise },
+		DashboardKey = { fg = C.orange },
+		DashboardDesc = { fg = C.softblue },
+		DashboardIcon = { fg = C.skyblue, bold = true },
+
 		-- Neo-tree
 		NeoTreeDirectoryName = { fg = C.softblue },
 		NeoTreeDirectoryIcon = { fg = C.softblue },
@@ -40,50 +83,8 @@ function M.get()
 		NeoTreeVertSplit = { fg = C.dark0, bg = inactive_bg },
 		NeoTreeStatusLineNC = { fg = C.dark1, bg = C.dark1 },
 
-		-- Alpha
-		DashboardShortCut = { fg = C.skyblue },
-		DashboardHeader = { fg = C.softblue },
-		DashboardCenter = { fg = C.mossgreen },
-		DashboardFooter = { fg = C.yellow, style = { "italic" } },
-		DashboardMruTitle = { fg = C.lightcyan },
-		DashboardProjectTitle = { fg = C.lightcyan },
-		DashboardFiles = { fg = C.pastelturqoise },
-		DashboardKey = { fg = C.orange },
-		DashboardDesc = { fg = C.softblue },
-		DashboardIcon = { fg = C.skyblue, bold = true },
-
-		-- Aerial
-		AerialLine = { fg = C.yellow, bg = C.none },
-		AerialGuide = { fg = C.grey3 },
-		AerialBooleanIcon = { link = "@boolean" },
-		AerialClassIcon = { link = "@type" },
-		AerialConstantIcon = { link = "@constant" },
-		AerialConstructorIcon = { link = "@constructor" },
-		AerialFieldIcon = { link = "@field" },
-		AerialFunctionIcon = { link = "@function" },
-		AerialMethodIcon = { link = "@method" },
-		AerialNamespaceIcon = { link = "@namespace" },
-		AerialNumberIcon = { link = "@number" },
-		AerialOperatorIcon = { link = "@operator" },
-		AerialTypeParameterIcon = { link = "@type" },
-		AerialPropertyIcon = { link = "@property" },
-		AerialStringIcon = { link = "@string" },
-		AerialVariableIcon = { link = "@constant" },
-		AerialEnumMemberIcon = { link = "@field" },
-		AerialEnumIcon = { link = "@type" },
-		AerialFileIcon = { link = "@text.uri" },
-		AerialModuleIcon = { link = "@namespace" },
-		AerialPackageIcon = { link = "@namespace" },
-		AerialInterfaceIcon = { link = "@type" },
-		AerialStructIcon = { link = "@type" },
-		AerialEventIcon = { link = "@type" },
-		AerialArrayIcon = { link = "@constant" },
-		AerialObjectIcon = { link = "@type" },
-		AerialKeyIcon = { link = "@type" },
-		AerialNullIcon = { link = "@type" },
-
 		-- Rainbow Delimiters
-		RainbowDelimiterRed = { fg = C.red },
+		RainbowDelimiterRed = { fg = C.pastelpink },
 		RainbowDelimiterYellow = { fg = C.yellow },
 		RainbowDelimiterBlue = { fg = C.softblue },
 		RainbowDelimiterOrange = { fg = C.orange },
@@ -93,14 +94,14 @@ function M.get()
 
 		-- Telescope
 		TelescopeNormal = { link = "NormalFloat" },
-		TelescopeBorder = { link = "FloatBorder" },
+		TelescopeBorder = { fg = C.turqoise },
 		TelescopeSelectionCaret = { fg = C.pastelpink },
 		TelescopeSelection = {
 			fg = O.transparent_background and C.pastelpink or C.grey0,
 			bg = O.transparent_background and C.none or C.darkgrey5,
 			style = { "bold" },
 		},
-		TelescopeMatching = { fg = C.softblue },
+		TelescopeMatching = { fg = C.turqoise },
 
 		-- Which key
 		WhichKey = { link = "NormalFloat" },

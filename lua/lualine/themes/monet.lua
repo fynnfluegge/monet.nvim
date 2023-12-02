@@ -20,7 +20,7 @@ local monet = {
 	},
 	command = {
 		a = { bg = C.orange, fg = C.dark0, gui = "bold" },
-		b = { bg = C.darkgrey1, fg = C.orange },
+		b = { bg = C.darkgrey4, fg = C.orange },
 	},
 	visual = {
 		a = { bg = C.cornflowerblue, fg = C.dark0, gui = "bold" },

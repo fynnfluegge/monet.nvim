@@ -282,7 +282,7 @@ function M.get()
 		RainbowDelimiterCyan = { fg = C.softturqoise },
 
 		-- Telescope
-		TelescopeNormal = { link = "NormalFloat" },
+		TelescopeNormal = { bg = inactive_bg, fg = C.grey0 },
 		TelescopeBorder = { fg = C.turqoise },
 		TelescopeSelectionCaret = { fg = C.pastelpink },
 		TelescopeSelection = {
@@ -290,7 +290,7 @@ function M.get()
 			bg = O.transparent_background and C.none or C.darkgrey5,
 			style = { "bold" },
 		},
-		TelescopeMatching = { fg = C.turqoise },
+		TelescopeMatching = { fg = C.pastelturqoise },
 
 		-- Which key
 		WhichKey = { link = "NormalFloat" },

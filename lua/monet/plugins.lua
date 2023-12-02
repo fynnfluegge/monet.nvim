@@ -305,7 +305,7 @@ function M.get()
 		IblScope = { fg = C.darkgrey5 },
 
 		-- Trouble
-		TroubleText = { fg = C.mossgreen },
+		TroubleText = { fg = C.grey1 },
 		TroubleCount = { fg = C.skyblue, bg = O.transparent_background and C.none or C.darkgrey1 },
 		TroubleNormal = { fg = C.grey0, bg = O.transparent_background and C.none or C.darkgrey0 },
 

@@ -50,7 +50,7 @@ function M.get()
 		PmenuThumb = { bg = C.grey5 },
 		Question = { fg = C.softblue },
 		QuickFixLine = { bg = C.darkgrey1, style = { "bold" } },
-		Search = { bg = C.turqoise, fg = C.dark0 },
+		Search = { bg = U.darken(C.grey6, 0.30, C.dark0), fg = C.neonyellow },
 		IncSearch = { bg = C.neonyellow, fg = C.dark1 },
 		CurSearch = { bg = C.red, fg = C.dark1 },
 		SpecialKey = { link = "NonText" },

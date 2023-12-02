@@ -1,6 +1,5 @@
 local C = require "monet.palette"
 local O = require "monet.config"
-local U = require "monet.utils"
 
 local M = {}
 

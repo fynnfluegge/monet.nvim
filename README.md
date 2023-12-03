@@ -38,7 +38,7 @@ highlight_override= {
   -- override neovim highlight groups
   Normal = { fg = "#c2f5bf" },
   -- override plugin highlight groups
-  TelescopeMatching = { fg = "##5cd5db" },
+  TelescopeMatching = { fg = "#5cd5db" },
 }
 ```
 

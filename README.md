@@ -18,7 +18,7 @@
 
 ## 🔧 Configuration
 
-#### This is the default configuration
+### Default configuration
 
 ```lua
 require("monet").setup {
@@ -31,9 +31,7 @@ require("monet").setup {
 
 ```
 
-#### Customize highlight groups
-
-Customize builtin neovim highlight groups and plugin highlight groups
+### Customize highlight groups
 
 ```lua
 highlight_override= {
@@ -44,9 +42,7 @@ highlight_override= {
 }
 ```
 
-#### Customize colors
-
-Customize the color palette of the theme
+### Customize color palette
 
 ```lua
 color_overrides = {
@@ -54,7 +50,7 @@ color_overrides = {
 }
 ```
 
-#### Cusomize styles
+### Cusomize styles
 
 ```lua
 styles = {
@@ -62,7 +58,7 @@ styles = {
 }
 ```
 
-## ✨ Contribtung
+## ✨ Contributing
 
 If you are missing a plugin integration don't hesitate to open an issue or raise a PR.
-Any kind contribution is highly appreciated!
+Any kind of contribution is highly appreciated!

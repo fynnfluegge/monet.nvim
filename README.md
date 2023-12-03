@@ -47,9 +47,9 @@ highlight_override= {
 Customize the color palette of the theme
 
 ```lua
-    color_overrides = {
-        red = "#ad3621",
-    }
+color_overrides = {
+    red = "#ad3621",
+}
 ```
 
 #### Cusomize styles

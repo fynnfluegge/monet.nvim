@@ -290,7 +290,7 @@ function M.get()
 			bg = O.transparent_background and C.none or C.darkgrey5,
 			style = { "bold" },
 		},
-		TelescopeMatching = { fg = C.pastelturqoise },
+		TelescopeMatching = { fg = C.springgreen },
 
 		-- Which key
 		WhichKey = { link = "NormalFloat" },

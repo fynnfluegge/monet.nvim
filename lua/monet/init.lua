@@ -14,8 +14,11 @@ end
 
 -- Highlight group
 function monet.highlight(colors)
-	local groups =
-		vim.tbl_extend("force", colors, type(config.overrides) == "function" and config.overrides() or config.overrides)
+	local groups = vim.tbl_extend(
+		"force",
+		colors,
+		type(config.overrides) == "function" and config.overrides() or config.highlight_overrides
+	)
 
 	for group, parameters in pairs(groups) do
 		if parameters.style then

@@ -2,7 +2,9 @@
 
 ### 🪻 Neovim theme inspired by Claude Monet's iconic water lilies 🪻
 
-![New Project (3)-min](https://github.com/fynnfluegge/monet.nvim/assets/16321871/bf2e159f-7d2b-498c-ae3b-7006943e5255)
+
+![New Project (6)-min](https://github.com/fynnfluegge/monet.nvim/assets/16321871/ab16d2dc-68fc-46b5-8551-16030bba4886)
+
 
 ## 📦 Installation
 
@@ -15,33 +17,52 @@
 ```
 
 ## 🔧 Configuration
+
 #### This is the default configuration
+
 ```lua
 require("monet").setup {
-  transparent_background = false,
-  overrides = {},
-  styles = {},
+    transparent_background = false,
+    semantic_tokens = true,
+    highlight_overrides= {},
+    color_overrides = {},
+    styles = {},
 }
 
 ```
-#### Customize colors
-You can customize builtin neovim highlight groups and plugin highlight groups
+
+#### Customize highlight groups
+
+Customize builtin neovim highlight groups and plugin highlight groups
+
 ```lua
-overrides = {
+highlight_override= {
   -- override neovim highlight groups
   Normal = { fg = "#c2f5bf" },
   -- override plugin highlight groups
-  TelescopeMatching = { fg = "##5cd5db" },
+  TelescopeMatching = { fg = "#5cd5db" },
+}
+```
+
+#### Customize colors
+
+Customize the color palette of the theme
+
+```lua
+color_overrides = {
+    red = "#ad3621",
 }
 ```
 
 #### Cusomize styles
+
 ```lua
 styles = {
   strings = { "italic" },
 }
 ```
-#### Enable transparent background
-```lua
-transparent_background = true
-```
+
+## ✨ Contribtung
+
+If you are missing a plugin integration don't hesitate to open an issue or raise a PR.
+Any kind contribution is highly appreciated!

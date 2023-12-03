@@ -1,15 +1,24 @@
 local config = require "monet.config"
+local palette = require "monet.palette"
 
 local monet = {}
 
 --- Apply user settings.
 ---@param values table
-function monet.setup(values) setmetatable(config, { __index = vim.tbl_extend("force", config.defaults, values) }) end
+function monet.setup(values)
+	setmetatable(config, { __index = vim.tbl_extend("force", config.defaults, values) })
+	if values.color_overrides then
+		setmetatable(palette, { __index = vim.tbl_extend("force", palette.defaults, values.color_overrides) })
+	end
+end
 
 -- Highlight group
 function monet.highlight(colors)
-	local groups =
-		vim.tbl_extend("force", colors, type(config.overrides) == "function" and config.overrides() or config.overrides)
+	local groups = vim.tbl_extend(
+		"force",
+		colors,
+		type(config.overrides) == "function" and config.overrides() or config.highlight_overrides
+	)
 
 	for group, parameters in pairs(groups) do
 		if parameters.style then

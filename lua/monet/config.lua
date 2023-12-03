@@ -2,7 +2,8 @@ local config = {
 	defaults = {
 		transparent_background = false,
 		semantic_tokens = true,
-		overrides = {},
+		highlight_overrides = {},
+		color_overrides = {},
 		styles = {},
 	},
 }

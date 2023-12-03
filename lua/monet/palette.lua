@@ -35,7 +35,7 @@ local palette = {
 		darkgrey4 = "#3b3f54",
 		darkgrey5 = "#353b4e",
 		dark0 = "#202636",
-		dark1 = "#161a24",
+		dark1 = "#1a1f2b",
 	},
 }
 

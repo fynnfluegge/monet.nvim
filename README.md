@@ -2,7 +2,9 @@
 
 ### 🪻 Neovim theme inspired by Claude Monet's iconic water lilies 🪻
 
-![New Project (3)-min](https://github.com/fynnfluegge/monet.nvim/assets/16321871/bf2e159f-7d2b-498c-ae3b-7006943e5255)
+
+![New Project (6)-min](https://github.com/fynnfluegge/monet.nvim/assets/16321871/ab16d2dc-68fc-46b5-8551-16030bba4886)
+
 
 ## 📦 Installation
 
@@ -38,7 +40,7 @@ highlight_override= {
   -- override neovim highlight groups
   Normal = { fg = "#c2f5bf" },
   -- override plugin highlight groups
-  TelescopeMatching = { fg = "##5cd5db" },
+  TelescopeMatching = { fg = "#5cd5db" },
 }
 ```
 

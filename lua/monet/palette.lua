@@ -1,11 +1,12 @@
 local palette = {
 	defaults = {
 		none = "NONE",
-		lightpeach = "#fcf4eb",
+		lightpeach = "#f2ece6",
 		pastelpeach = "#f5dcd7",
 		pastelpink = "#f1c5c4",
-		yellow = "#ead49a",
 		neonyellow = "#fcf279",
+		yellow = "#ead49a",
+		pastelorange = "#deb787",
 		orange = "#e6a37c",
 		red = "#ed8695",
 		springgreen = "#64e880",

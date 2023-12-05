@@ -42,7 +42,7 @@ function M.get()
 		FloatTitle = { fg = C.grey2 },
 		Pmenu = {
 			bg = (O.transparent_background and vim.o.pumblend == 0) and C.none
-				or U.darken(C.darkgrey5, 0.8, C.darkgrey0),
+					or U.darken(C.darkgrey5, 0.8, C.darkgrey0),
 			fg = C.grey3,
 		},
 		PmenuSel = { bg = C.darkgrey1, style = { "bold" } },
@@ -74,7 +74,7 @@ function M.get()
 		Comment = { fg = C.grey5, bg = "NONE", italic = true },
 		SpecialComment = { link = "Special" },
 		Constant = { fg = C.orange },
-		String = { fg = U.darken(C.mossgreen, 0.90, C.dark0), style = O.styles.strings or {} },
+		String = { fg = U.darken(C.mossgreen, 0.90, C.dark0), style = O.styles.strings or { "italic" } },
 		Character = { fg = C.softturqoise },
 		Number = { fg = C.orange, style = O.styles.numbers or {} },
 		Float = { link = "Number" },

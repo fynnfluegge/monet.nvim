@@ -1,10 +1,8 @@
 # 👨‍🎨🎨 Monet.nvim
 
-### 🪻 Neovim theme inspired by Claude Monet's iconic water lilies 🪻
-
+### 🪷🪻 Neovim theme inspired by Claude Monet's iconic water lilies
 
 ![New Project (6)-min](https://github.com/fynnfluegge/monet.nvim/assets/16321871/ab16d2dc-68fc-46b5-8551-16030bba4886)
-
 
 ## 📦 Installation
 

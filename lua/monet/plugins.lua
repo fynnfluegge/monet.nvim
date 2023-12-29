@@ -286,8 +286,8 @@ function M.get()
 		TelescopeBorder = { fg = C.turqoise },
 		TelescopeSelectionCaret = { fg = C.pastelpink },
 		TelescopeSelection = {
-			fg = O.transparent_background and C.pastelpink or C.grey0,
-			bg = O.transparent_background and C.none or C.darkgrey5,
+			fg = C.grey0,
+			bg = O.transparent_background and C.darkgrey4 or C.darkgrey5,
 			style = { "bold" },
 		},
 		TelescopeMatching = { fg = C.springgreen },

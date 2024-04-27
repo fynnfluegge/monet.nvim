@@ -2,7 +2,6 @@ local M = {}
 
 M.bg = "#000000"
 M.fg = "#ffffff"
-M.day_brightness = 0.3
 
 ---@param hex_str string hexadecimal value of a color
 local hex_to_rgb = function(hex_str)

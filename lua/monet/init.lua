@@ -6,9 +6,13 @@ local monet = {}
 --- Apply user settings.
 ---@param values table
 function monet.setup(values)
-	setmetatable(config, { __index = vim.tbl_extend("force", config.defaults, values) })
+	if values.dark_mode == false then setmetatable(palette, { __index = palette.light_mode }) end
 	if values.color_overrides then
-		setmetatable(palette, { __index = vim.tbl_extend("force", palette.defaults, values.color_overrides) })
+		if values.dark_mode == false then
+			setmetatable(palette, { __index = vim.tbl_extend("force", palette.light_mode, values.color_overrides) })
+		else
+			setmetatable(palette, { __index = vim.tbl_extend("force", palette.defaults, values.color_overrides) })
+		end
 	end
 end
 

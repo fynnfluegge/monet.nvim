@@ -197,6 +197,15 @@ function M.get()
 		["@lsp.typemod.type.defaultLibrary"] = { link = "@type.builtin" },
 		["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
 		["@lsp.typemod.variable.injected"] = { link = "@variable" },
+
+		-- Markdown
+		["@markup.heading.1.markdown"] = { link = "rainbow1" },
+		["@markup.heading.2.markdown"] = { link = "rainbow2" },
+		["@markup.heading.3.markdown"] = { link = "rainbow3" },
+		["@markup.heading.4.markdown"] = { link = "rainbow4" },
+		["@markup.heading.5.markdown"] = { link = "rainbow5" },
+		["@markup.heading.6.markdown"] = { link = "rainbow6" },
+		["@markup.link.markdown_inline"] = { link = "@string" },
 	}
 end
 

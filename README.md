@@ -50,7 +50,7 @@ color_overrides = {
 }
 ```
 
-### Cusomize styles
+### Customize styles
 
 ```lua
 styles = {

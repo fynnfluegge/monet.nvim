@@ -19,6 +19,7 @@ function M.get()
 		EndOfBuffer = { fg = O.show_end_of_buffer and C.darkgrey1 or C.dark0 },
 		ErrorMsg = { fg = C.red, style = { "bold", "italic" } },
 		VertSplit = { fg = O.transparent_background and C.darkgrey1 or C.darkgrey0 },
+		WinSeparator = { fg = O.transparent_background and C.darkgrey1 or C.darkgrey0 },
 		Folded = { fg = C.softblue, bg = O.transparent_background and C.none or C.darkgrey1 },
 		FoldColumn = { fg = C.grey5 },
 		SignColumn = { fg = C.darkgrey1 },

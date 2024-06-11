@@ -19,7 +19,6 @@ function M.get()
 		EndOfBuffer = { fg = O.show_end_of_buffer and C.darkgrey1 or C.dark0 },
 		ErrorMsg = { fg = C.red, style = { "bold", "italic" } },
 		VertSplit = { fg = O.transparent_background and C.darkgrey1 or C.darkgrey0 },
-		WinSeparator = { fg = O.transparent_background and C.darkgrey1 or C.darkgrey0 },
 		Folded = { fg = C.softblue, bg = O.transparent_background and C.none or C.darkgrey1 },
 		FoldColumn = { fg = C.grey5 },
 		SignColumn = { fg = C.darkgrey1 },
@@ -43,7 +42,7 @@ function M.get()
 		FloatTitle = { fg = C.grey2 },
 		Pmenu = {
 			bg = (O.transparent_background and vim.o.pumblend == 0) and C.none
-					or U.darken(C.darkgrey5, 0.8, C.darkgrey0),
+				or U.darken(C.darkgrey5, 0.8, C.darkgrey0),
 			fg = C.grey3,
 		},
 		PmenuSel = { bg = C.darkgrey1, style = { "bold" } },
@@ -71,6 +70,8 @@ function M.get()
 		Whitespace = { fg = C.darkgrey1 },
 		WildMenu = { bg = C.grey5 },
 		WinBar = { fg = C.pastelpeach },
+		WinBarNC = { link = "WinBar" },
+		WinSeparator = { fg = O.transparent_background and C.darkgrey1 or C.darkgrey0 },
 
 		Comment = { fg = C.grey5, bg = "NONE", italic = true },
 		SpecialComment = { link = "Special" },

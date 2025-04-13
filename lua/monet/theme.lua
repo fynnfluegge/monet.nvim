@@ -37,7 +37,10 @@ function M.get()
 			bg = (O.transparent_background and C.none) or C.dark0,
 		},
 		NormalSB = { fg = C.grey0, bg = C.darkgrey0 },
-		NormalFloat = { fg = C.grey0, bg = (O.transparent_background and vim.o.winblend == 0) and C.none or C.dark1 },
+		NormalFloat = {
+			fg = C.grey0,
+			bg = (O.transparent_background and vim.o.winblend == 0) and C.none or C.dark0,
+		},
 		FloatBorder = { fg = C.softblue },
 		FloatTitle = { fg = C.grey2 },
 		Pmenu = {

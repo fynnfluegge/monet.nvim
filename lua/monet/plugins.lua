@@ -96,6 +96,9 @@ function M.get()
 		BlinkCmpKindTypeParameter = { fg = C.lightpeach },
 		BlinkCmpKindCopilot = { fg = C.lightpeach },
 
+		-- Bufferline
+		BufferLineIndicatorSelected = { fg = active_bg },
+		BufferLineFill = { bg = inactive_bg },
 		-- Cmp
 		CmpItemAbbr = { fg = C.grey3 },
 		CmpItemAbbrDeprecated = { fg = C.grey5, style = { "strikethrough" } },

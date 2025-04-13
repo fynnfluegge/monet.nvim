@@ -68,6 +68,13 @@ function M.get()
 		BlinkCmpLabel = { fg = C.grey0 },
 		BlinkCmpLabelDeprecated = { fg = C.grey1, style = { "strikethrough" } },
 
+		BlinkCmpMenu = { fg = active_bg },
+		BlinkCmpMenuBorder = { fg = C.darkgrey2 },
+		BlinkCmpDoc = { fg = active_bg },
+		BlinkCmpDocBorder = { fg = C.darkgrey2 },
+		BlinkCmpSignatureHelp = { fg = active_bg },
+		BlinkCmpSignatureHelpBorder = { fg = C.darkgrey2 },
+
 		BlinkCmpLabelMatch = { fg = C.turqoise, style = { "bold" } },
 		BlinkCmpKindVariable = { fg = C.pastelpeach },
 		BlinkCmpKindText = { fg = C.lightpeach },
@@ -99,6 +106,7 @@ function M.get()
 		-- Bufferline
 		BufferLineIndicatorSelected = { fg = active_bg },
 		BufferLineFill = { bg = inactive_bg },
+
 		-- Cmp
 		CmpItemAbbr = { fg = C.grey3 },
 		CmpItemAbbrDeprecated = { fg = C.grey5, style = { "strikethrough" } },

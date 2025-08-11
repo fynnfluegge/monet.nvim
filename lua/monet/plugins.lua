@@ -161,6 +161,20 @@ function M.get()
 		FlashCurrent = { fg = C.orange, bg = active_bg },
 		FlashPrompt = { link = "NormalFloat" },
 
+		-- GitSigns
+		GitSignsAdd = { fg = C.mossgreen },
+		GitSignsChange = { fg = C.yellow },
+		GitSignsDelete = { fg = C.red },
+
+		GitSignsCurrentLineBlame = { fg = C.grey6 },
+
+		GitSignsAddPreview = { link = "DiffAdd" },
+		GitSignsDeletePreview = { link = "DiffDelete" },
+
+		GitSignsAddInline = { link = "DiffAdd" },
+		GitSignsChangeInline = { link = "DiffChange" },
+		GitSignsDeleteInline = { link = "DiffDelete" },
+
 		-- Mason
 		MasonHeader = {
 			fg = O.transparent_background and C.pastelturqoise or C.dark0,

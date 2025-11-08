@@ -103,6 +103,23 @@ function M.get()
 		BlinkCmpKindTypeParameter = { fg = C.lightpeach },
 		BlinkCmpKindCopilot = { fg = C.lightpeach },
 
+		-- Blink Indent
+		BlinkIndent = { fg = C.darkgrey5, bg = "none" },
+		BlinkIndentScope = { fg = C.grey0, bg = "none" },
+		BlinkIndentRed = { fg = C.red, bg = "none" },
+		BlinkIndentOrange = { fg = C.orange, bg = "none" },
+		BlinkIndentYellow = { fg = C.yellow, bg = "none" },
+		BlinkIndentGreen = { fg = C.mossgreen, bg = "none" },
+		BlinkIndentViolet = { fg = C.cornflowerblue, bg = "none" },
+		BlinkIndentCyan = { fg = C.softturqoise, bg = "none" },
+		BlinkIndentRedUnderline = { fg = C.red, bg = "none" },
+		BlinkIndentOrangeUnderline = { fg = C.orange, bg = "none" },
+		BlinkIndentYellowUnderline = { fg = C.yellow, bg = "none" },
+		BlinkIndentGreenUnderline = { fg = C.mossgreen, bg = "none" },
+		BlinkIndentVioletUnderline = { fg = C.cornflowerblue, bg = "none" },
+		BlinkIndentCyanUnderline = { fg = C.softturqoise, bg = "none" },
+		BlinkIndentBlueUnderline = { fg = C.softblue, bg = "none" },
+
 		-- Bufferline
 		BufferLineIndicatorSelected = { fg = active_bg },
 		BufferLineFill = { bg = inactive_bg },
